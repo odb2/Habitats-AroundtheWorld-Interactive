@@ -11,23 +11,23 @@ let modalDesc = {
   },
   desert: {
     heading: "Desert",
-    content: "",
-    img: ""
+    content: "changeme",
+    img: "assets/circimage2.png"
   },
   mountain: {
     heading: "Mountain",
-    content: "",
-    img: ""
+    content: "changeme",
+    img: "assets/circimage2.png"
   },
   poles: {
     heading: "Poles",
-    content: "",
-    img: ""
+    content: "changeme",
+    img: "assets/circimage2.png"
   },
   water: {
     heading: "Water",
-    content: "",
-    img: ""
+    content: "changeme",
+    img: "assets/circimage2.png"
   }
 };
 
@@ -84,21 +84,6 @@ let habitats = {
             img: "https://c8.alamy.com/comp/BGBPCR/boyds-forest-dragon-hypsilurus-boydii-queensland-australia-BGBPCR.jpg",
             desc: "The Amethystine Python is one of the biggest snakes in the world. It is named for its blue color. This python eats pigs, possums, birds, and another animals. It squeezes the life out of them!"
           },
-          {
-            name: "Azure Kingfisher2",
-            img: "https://sophianugentsiegal.com/wp-content/uploads/2020/02/PastedGraphic-2.jpg",
-            desc: "The Amethystine Python is one of the biggest snakes in the world. It is named for its blue color. This python eats pigs, possums, birds, and another animals. It squeezes the life out of them!"
-          },
-          {
-            name: "Boyds forest dragon2",
-            img: "https://c8.alamy.com/comp/BGBPCR/boyds-forest-dragon-hypsilurus-boydii-queensland-australia-BGBPCR.jpg",
-            desc: "The Amethystine Python is one of the biggest snakes in the world. It is named for its blue color. This python eats pigs, possums, birds, and another animals. It squeezes the life out of them!"
-          },
-          {
-            name: "Azure Kingfisher2",
-            img: "https://sophianugentsiegal.com/wp-content/uploads/2020/02/PastedGraphic-2.jpg",
-            desc: "The Amethystine Python is one of the biggest snakes in the world. It is named for its blue color. This python eats pigs, possums, birds, and another animals. It squeezes the life out of them!"
-          }
         ]
       }
     ],
@@ -110,23 +95,139 @@ let habitats = {
       {
         top: "80",
         left: "80",
-        location: "Daintree Forest, Australia",
+        location: "Grassland1, Somewhere",
         img: "assets/background1.png",
-        desc: "The Daintree Forest is a region on the northeast coast of Queensland, Australia. It is a part of the biggest tropical rainforest in the country!",
-        gearth: "Now explore more about the Daintree Forest in google earth by selecting the button below. After you finished, close the tab and select the arrow button on the right.",
-        gearth_Button: "Daintree Forest Google Earth",
+        desc: "Grassland1 description",
+        gearth: "Now explore more about the Grassland1 in google earth by selecting the button below. After you finished, close the tab and select the arrow button on the right.",
+        gearth_Button: "Grassland1 Google Earth",
         video : "assets/Daintree Forest_ Australia.mp4",
         animals:
         [
           {
-            name: "Boyds forest dragon",
+            name: "Animal1",
             img: "https://c8.alamy.com/comp/BGBPCR/boyds-forest-dragon-hypsilurus-boydii-queensland-australia-BGBPCR.jpg",
-            desc: "The Amethystine Python is one of the biggest snakes in the world. It is named for its blue color. This python eats pigs, possums, birds, and another animals. It squeezes the life out of them!"
+            desc: "Animal1 Description"
           },
           {
-            name: "Azure Kingfisher",
+            name: "Animal2",
             img: "https://sophianugentsiegal.com/wp-content/uploads/2020/02/PastedGraphic-2.jpg",
-            desc: "The Amethystine Python is one of the biggest snakes in the world. It is named for its blue color. This python eats pigs, possums, birds, and another animals. It squeezes the life out of them!"
+            desc: "Animal2 description"
+          }
+        ]
+      }
+    ],
+    background : "#C9E265"
+  },
+  desert:{
+    locations :
+    [
+      {
+        top: "80",
+        left: "80",
+        location: "Desert1, Somewhere",
+        img: "assets/background1.png",
+        desc: "Desert Description",
+        gearth: "Now explore more about the Desert1 in google earth by selecting the button below. After you finished, close the tab and select the arrow button on the right.",
+        gearth_Button: "Desert1 Google Earth",
+        video : "assets/Daintree Forest_ Australia.mp4",
+        animals:
+        [
+          {
+            name: "Animal1",
+            img: "https://c8.alamy.com/comp/BGBPCR/boyds-forest-dragon-hypsilurus-boydii-queensland-australia-BGBPCR.jpg",
+            desc: "Animal1 Description"
+          },
+          {
+            name: "Animal2",
+            img: "https://sophianugentsiegal.com/wp-content/uploads/2020/02/PastedGraphic-2.jpg",
+            desc: "Animal2 description"
+          }
+        ]
+      }
+    ],
+    background : "#C9E265"
+  },
+  mountain:{
+    locations :
+    [
+      {
+        top: "80",
+        left: "80",
+        location: "mountain1, somewhere",
+        img: "assets/background1.png",
+        desc: "mountain1 description",
+        gearth: "Now explore more about the mountain1 in google earth by selecting the button below. After you finished, close the tab and select the arrow button on the right.",
+        gearth_Button: "mountain1 Google Earth",
+        video : "assets/Daintree Forest_ Australia.mp4",
+        animals:
+        [
+          {
+            name: "Animal1",
+            img: "https://c8.alamy.com/comp/BGBPCR/boyds-forest-dragon-hypsilurus-boydii-queensland-australia-BGBPCR.jpg",
+            desc: "Animal1 Description"
+          },
+          {
+            name: "Animal2",
+            img: "https://sophianugentsiegal.com/wp-content/uploads/2020/02/PastedGraphic-2.jpg",
+            desc: "Animal2 description"
+          }
+        ]
+      }
+    ],
+    background : "#C9E265"
+  },
+  poles:{
+    locations :
+    [
+      {
+        top: "80",
+        left: "80",
+        location: "pole1, somewhere",
+        img: "assets/background1.png",
+        desc: "pole1 description",
+        gearth: "Now explore more about the pole1 in google earth by selecting the button below. After you finished, close the tab and select the arrow button on the right.",
+        gearth_Button: "pole1 Google Earth",
+        video : "assets/Daintree Forest_ Australia.mp4",
+        animals:
+        [
+          {
+            name: "Animal1",
+            img: "https://c8.alamy.com/comp/BGBPCR/boyds-forest-dragon-hypsilurus-boydii-queensland-australia-BGBPCR.jpg",
+            desc: "Animal1 Description"
+          },
+          {
+            name: "Animal2",
+            img: "https://sophianugentsiegal.com/wp-content/uploads/2020/02/PastedGraphic-2.jpg",
+            desc: "Animal2 description"
+          }
+        ]
+      }
+    ],
+    background : "#C9E265"
+  },
+  water:{
+    locations :
+    [
+      {
+        top: "80",
+        left: "80",
+        location: "water1, somewhere",
+        img: "assets/background1.png",
+        desc: "water1 description",
+        gearth: "Now explore more about the water1 in google earth by selecting the button below. After you finished, close the tab and select the arrow button on the right.",
+        gearth_Button: "water1 Google Earth",
+        video : "assets/Daintree Forest_ Australia.mp4",
+        animals:
+        [
+          {
+            name: "Animal1",
+            img: "https://c8.alamy.com/comp/BGBPCR/boyds-forest-dragon-hypsilurus-boydii-queensland-australia-BGBPCR.jpg",
+            desc: "Animal1 Description"
+          },
+          {
+            name: "Animal2",
+            img: "https://sophianugentsiegal.com/wp-content/uploads/2020/02/PastedGraphic-2.jpg",
+            desc: "Animal2 description"
           }
         ]
       }
@@ -272,7 +373,7 @@ function showlocDet(place, n) {
   </div>
   <div class="google_earth">
     <h4>${location.gearth}</h4>
-  <a href="#" class="google_earth_button">${location.gearth_Button}</a>
+  <a target="_blank" href="https://earth.google.com/web/search/${location.location}" class="google_earth_button">${location.gearth_Button}</a>
   </div>
 </div>
 
