@@ -1,0 +1,597 @@
+body,*{
+  margin : 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+html{
+  overflow: hidden;
+}
+
+.hidden{
+  display: none;
+}
+
+.background{
+  position: absolute;
+  z-index: -2;
+  /* height: 1024px;
+  width: 1920px; */
+ background:  #1070B6;
+}
+
+.main-body{
+
+position: relative;
+height: 100vh;
+padding-top: 20px;
+overflow: scroll;
+}
+
+.world_map{
+  top: 0;
+  position: absolute;
+  min-width : 1440px;
+  height: 1024px;
+  width: 1920px;
+  z-index: -1;
+}
+
+.heading{
+text-align: center;
+  font-size: 24px;
+}
+
+
+.instruction{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background: #5ECD58;
+  padding: 20px;
+  border-radius: 100%;
+  /* height: 50px;
+  width: 50px; */
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.instruction img{
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 50px;
+}
+
+.instruction p{
+  margin : 0;
+  margin-left: -5px;
+}
+
+
+.instruction_model_background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+
+.instruction_model_background.active{
+  z-index: 4;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.instruction_heading{
+  font-size: 48px;
+}
+
+.instruction_model{
+  text-align: center;
+  background: url("assets/startbackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 8px;
+  max-width: 50%;
+  height: 40%;
+  min-height: 350px;
+}
+
+.instruction_model p{
+  font-size: 36px;
+  padding:  28px 64px;
+
+}
+
+.speak img{
+  width: 50px;
+}
+
+.cross,.speak{
+  padding: 8px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.habitats{
+  position: absolute;
+  bottom: 10px;
+  left:10px;
+}
+
+
+.habitats div{
+  padding: 4px;
+  background: #FFF9CC;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+
+.habitats div:hover{
+  padding: 14px;
+  transition: 0,5s;
+}
+
+.habitats div h2{
+  padding: 12px;
+}
+
+.forest h2{
+
+  background: #4CB145;
+}
+
+.grassland h2{
+  background: rgb(201,226,101);
+}
+
+.desert h2{
+  background: rgb(250,144,77);
+}
+
+.mountain h2{
+  background: rgb(255,222,89);
+}
+
+.water h2{
+  background: rgb(92,225,230);
+}
+
+
+.habitat_background{
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.habitat_background.active{
+  z-index: 2;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.habitat_model{
+  position: absolute;
+  top: 50%;
+  left : 50%;
+  transform: translate(-50%,-50%);
+  background: white;
+  padding: 4px;
+  padding-bottom: 16px;
+  border-radius: 12px;
+  z-index: -2;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.habitat_model.active{
+  z-index : 2;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.speaker{
+  text-align: right;
+}
+
+.speaker img{
+  width: 30px;
+  cursor: pointer;
+}
+
+.habitat_model_content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin : 4px 32px;
+  grid-gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_container h1{
+  margin-bottom: 16px;
+}
+
+.right_container{
+  text-align: center;
+}
+
+.right_container img{
+  width : 250px;
+}
+
+.next{
+  margin-top: 16px;
+  padding :16px;
+  background: rgb(246,85,87);
+  font-weight:  bold;
+  color : white;
+  letter-spacing: 3px;
+  font-size: 18px;
+  display: inline-block;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.next span{
+  color : white;
+  font-size: 24px;
+}
+
+
+.next_button{
+  position: absolute;
+  padding: 32px 40px;
+  border-radius: 50%;
+  top:50%;
+  right : 2%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.prev_button{
+  position: absolute;
+  padding: 32px 40px;
+  border-radius: 50%;
+  top : 45%;
+  left : 1%;
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+.next_button:hover , .prev_button:hover{
+  background: white;
+  transition: 0.5s;
+}
+
+
+.location_description , .location_animals{
+  position: absolute;
+  width: 95%;
+  top: 6vh;
+  left: 2.5%;
+  background: rgb(255,249,204);
+  overflow-y: scroll;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.location_description_containerr{
+  position: relative;
+}
+
+.location_description_heading{
+  padding : 16px;
+  text-align: center;
+}
+
+.desc_cross{
+  position: absolute;
+  top: 20px;
+  right : 20px;
+  cursor: pointer;
+}
+
+
+.location_description_content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 16px;
+  grid-gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.location_left_container img{
+  width : 100%;
+}
+
+.google_earth{
+  padding : 32px  16px;
+}
+
+.google_earth h4{
+  margin-bottom: 32px;
+}
+
+
+.google_earth_button{
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding: 8px 32px;
+  background: rgb(248,166,43);
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+
+.animals{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap : 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 128px;
+}
+
+.animal_animal{
+  text-align: center;
+  cursor: pointer;
+}
+
+.animal_animal img{
+  width : 100%;
+  height: 100%;
+}
+
+.animal_description{
+  position: absolute;
+  max-height: 70%;
+  width: 80%;
+  top : 15%;
+  left : 9%;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5S;
+  padding: 32px;
+  border-radius: 8px;
+  overflow-y: scroll;
+}
+
+.animal_description_content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap : 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+
+}
+
+.animal_speaker{
+  text-align: right
+}
+
+.animal_speaker img{
+  width : 30px;
+  cursor: pointer;
+}
+
+.animal_image img{
+  width: 100%;
+}
+
+.animal_desc h2{
+  margin-bottom: 32px;
+}
+
+.animal_cross{
+  text-align: right;
+  font-weight: bolder;
+  padding : 16px 16px 0 0;
+  cursor: pointer;
+}
+
+.background_dark{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  transition: 0.5s;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.background_dark.active{
+  z-index: 2;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.location_description.active, .location_animals.active , .video.active {
+  z-index: 3;
+  opacity:1;
+  transition: 0.5s;
+}
+
+
+.animal_description.active{
+  z-index: 5;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.map_location{
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+}
+
+.map_location h4{
+  padding : 16px;
+  min-width: 200px;
+}
+
+.map_location img{
+  width: 30px;
+}
+
+.video{
+  position: absolute;
+  top : 13%;
+  left : 13%;
+  width: 70%;
+  background: white;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+video{
+  width : 90%;
+  margin-left : 5%;
+}
+
+.videoBack , .location_description_back , .location_animals_back{
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  opacity: 0;
+  transition: 0.5s;
+  top: 0;
+  left: 0;
+}
+
+.videoBack.active, .location_description_back.active ,.location_animals_back.active{
+  z-index: 2;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+@media (max-width :  1334px) {
+  .instruction_model p{
+    font-size: 28px;
+  }
+}
+
+@media (max-width : 1099px) {
+  .instruction_model {
+    max-width: 68%;
+  }
+}
+
+@media (max-width : 768px) {
+  .instruction_model{
+    max-width: 75%;
+    height: 40%;
+    min-height: 300px;
+  }
+
+  .habitat_model{
+    width: 75%;
+  }
+
+  .video{
+    top : 20%;
+    left : 9%;
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .instruction_model{
+    max-width: 100%;
+    width : 90%;
+
+  }
+
+  .heading{
+    font-size: 19px;
+  }
+
+  .instruction{
+    top : 85px;
+  }
+
+  .instruction img{
+    width: 25px;
+  }
+
+.instruction_heading {
+  font-size: 32px;
+}
+
+.instruction_model p{
+  font-size: 24px;
+}
+
+.instruction p {
+    font-size: 11px;
+    margin: 0;
+    margin-left: -5px;
+}
+  .habitat_model{
+    width: 90%;
+  }
+
+  .right_container img{
+    width: 150px;
+  }
+  .video{
+    top:30%;
+    left : 0;
+    width: 100%;
+  }
+
+  .location_animals{
+    top: 5%;
+    max-height: 90%;
+    overflow-y: scroll;
+  }
+
+  .animals{
+    grid-template-columns: 1fr;
+  }
+
+  .animal_description{
+    left: 0;
+    width: 90%;
+    max-height: 90%;
+    overflow-y:scroll;
+  }
+
+  .animal_description_content{
+    grid-template-columns: 1fr
+  }
+  /* .heading {
+    text-align: left;
+    font-size: 14px;
+    margin-left: 8px;
+  } */
+}

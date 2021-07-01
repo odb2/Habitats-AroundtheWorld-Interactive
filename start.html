@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Start Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="start.css">
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="main-body">
+    <div id="maps"></div>
+    <img src="assets/world-map.png" alt="" class="world_map">
+    <div class="heading">
+      <h1>Habitats on Earth</h1>
+    </div>
+    <div class="instruction" onclick="showInstruction()">
+      <img src="assets/InstructionsClickv1.png" alt="">
+      <p>Instruction</p>
+    </div>
+  </div>
+  <div class="instruction_model_background" id="instruction">
+    <div class="instruction_model">
+      <div class="cross" onclick="showInstruction()">
+        <h1>X</h1>
+      </div>
+      <h1 class="instruction_heading">Instruction</h1>
+      <p>Click on different habitats on the left to see some awesome places and their animals.</p>
+      <div class="speak" onclick="speech(0)">
+        <img src="assets/SpeakerIcon.png" class="speaker" alt="">
+        <img src="assets/pauseicon2.png" class="pause hidden"alt="">
+      </div>
+    </div>
+  </div>
+  <div class="habitats">
+    <div class="forest" onclick="showModel('forest')">
+      <h2>Forest</h2>
+    </div>
+    <div class="grassland" onclick="showModel('grassland')">
+      <h2>Grassland</h2>
+    </div>
+    <div class="desert" onclick="showModel('desert')">
+      <h2>Desert</h2>
+    </div>
+    <div class="mountain" onclick="showModel('mountain')">
+      <h2>Mountain</h2>
+    </div>
+    <div class="poles" onclick="showModel('poles')">
+      <h2>Poles</h2>
+    </div>
+    <div class="water" onclick="showModel('water')">
+      <h2>Water</h2>
+    </div>
+  </div>
+  <div class="habitat_model">
+
+  </div>
+
+
+  <div class="habitat_description">
+
+  </div>
+
+
+  <div class="videoBack" id="videoBack">
+  <div class="video" id="video">
+
+  </div>
+</div>
+
+  <div class="location_description_back" id="location_description_back">
+  <div class="location_description" id="location_description">
+
+  </div>
+</div>
+
+  <div class="location_animals_back" id="location_animals_back">
+  <div class="location_animals" id="location_animals">
+
+</div>
+</div>
+
+<div class="animal_description"  id="animal_description">
+
+</div>
+
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
